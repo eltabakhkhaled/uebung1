@@ -26,15 +26,22 @@ public class PasswordTest {
     public void CheckPassword1(){
         Password word= new Password();
         boolean answer = word.UpperLowerCase("Ichduersie2?");
-
+        assertTrue(answer);
     }
 
     @Test
     @DisplayName("Does the password contain numbers?")
     public void CheckPassword4(){
-      //  Password word= new Password("Ichduersie2?");
-
-
+      Password word= new Password();
+      boolean answer = word.Numbers("Ichduersie2?");
+      assertTrue(answer);
     }
 
+    @Test
+    @DisplayName("Does the password contain numbers?")
+    public void CheckPassword5(){
+        Password word= new Password();
+        boolean answer = word.Numbers("Ichduersie?");
+        assertTrue(answer);
+    }
 }
