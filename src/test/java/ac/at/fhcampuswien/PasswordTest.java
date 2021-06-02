@@ -26,7 +26,7 @@ public class PasswordTest {
     @DisplayName("Does the password contain lower and uppercase?")
     public void CheckPassword3(){
         Password word= new Password();
-        boolean answer = word.checkPassword("Ichduersie");
+        boolean answer = word.checkPassword("Ichduersie8?");
         assertTrue(answer);
     }
 
@@ -34,7 +34,7 @@ public class PasswordTest {
     @DisplayName("Does the password contain lower and uppercase?")
     public void CheckPassword4(){
         Password word= new Password();
-        boolean answer = word.checkPassword("ichduersie");
+        boolean answer = word.checkPassword("ichduersie8?");
         assertFalse(answer);
     }
 
@@ -60,7 +60,7 @@ public class PasswordTest {
     @DisplayName("Does the password contain special characters?")
     public void CheckPassword7(){
         Password word= new Password();
-        boolean answer = word.checkPassword("Ichduersie?");
+        boolean answer = word.checkPassword("Ichduersie8?");
         assertTrue(answer);
     }
 
