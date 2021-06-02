@@ -72,4 +72,29 @@ public class PasswordTest {
         assertFalse(answer);
     }
 
+    @Test
+    @DisplayName("Does the password contain increasing numbers?")
+    public void CheckPassword9(){
+        Password word= new Password();
+        boolean answer = word.checkPassword("Ichduersie1234#");
+        assertFalse(answer);
+    }
+
+
+    @Test
+    @DisplayName("Does the password contain same numbers?")
+    public void CheckPassword10(){
+        Password word= new Password();
+        boolean answer = word.checkPassword("Ichduersie111#");
+        assertFalse(answer);
+    }
+
+
+    @Test
+    @DisplayName("Does the password contain same numbers?")
+    public void CheckPassword11(){
+        Password word= new Password();
+        boolean answer = word.checkPassword("Ichdue22111#");
+        assertFalse(answer);
+    }
 }

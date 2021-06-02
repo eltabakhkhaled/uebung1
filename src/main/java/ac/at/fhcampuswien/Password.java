@@ -8,6 +8,10 @@ public class Password {
         int uppercasecounter = 0;
         int lowercasecounter = 0;
         int specialcasecounter = 0;
+        char previous=0;
+        char first=0;
+        int counter=1;
+        int toomany=1;
 
         if (word.length() < 8 || word.length() > 25) {
             return false;
@@ -18,6 +22,28 @@ public class Password {
 
             if (isDigit(ch)) {
                 numberscounter++;
+                char c = word.charAt(i);
+                if (previous == c){
+                    counter++;
+                }else{
+                    counter = 1;
+                }
+                if(counter > 2){
+                    return false;
+                }
+                previous = c;
+                char g = word.charAt(i);
+                if (first +1 == g ){
+                    toomany++;
+                }
+                else {
+                    toomany=1;
+                }
+                if (toomany > 2){
+                    return false;
+                }
+                first = g;
+
             } else if (Letter(ch)) {
                 letterscounter++;
             }
